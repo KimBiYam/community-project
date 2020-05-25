@@ -3,4 +3,4 @@ spring:  mvc:    view:      prefix: /WEB-INF/jsp/
   datasource:    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/community?serverTimezone=UTC&useSSL=false
     username: test
-    password: 1234      devtools:    livereload:      enabled: true      
+    password: 1234      devtools:    livereload:      enabled: true      mybatis:  mapper-locations:  - mappers/*.xml  type-aliases-package: com.myapp.community.vo      

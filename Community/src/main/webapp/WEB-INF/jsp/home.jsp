@@ -13,6 +13,7 @@
 	<br>
 	<sec:authorize access="isAnonymous()">
 		<a href="/member/login">로그인 페이지</a>
+		<a href="/member/join">회원가입 페이지</a>
 	<br>
 	</sec:authorize>
 

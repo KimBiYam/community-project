@@ -5,8 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="/resources/css/default.css" />
-<link rel="stylesheet" href="/resources/css/style.css" />
 <title>Insert title here</title>
 </head>
 <body>
@@ -28,9 +26,7 @@
       </ul>
       <div>
         <ul>
-          <li><a href="#">회원가입</a></li>
-          <li><a href="#">아이디 찾기</a></li>
-          <li><a href="#">비밀번호 찾기</a></li>
+          <li><a href="/member/join">회원가입</a></li>
         </ul>
       </div>
     </section>
@@ -53,8 +49,6 @@
           return false;
         }
         $("form").submit();
-        
-        
       };
     </script>
 </body>
