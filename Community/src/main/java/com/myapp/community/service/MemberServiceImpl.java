@@ -1,6 +1,7 @@
 package com.myapp.community.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.myapp.community.mapper.MemberMapper;
@@ -9,12 +10,15 @@ import com.myapp.community.vo.MemberVO;
 @Service
 public class MemberServiceImpl implements MemberService {
 	@Autowired
-	MemberMapper memberMapper;
+	private MemberMapper memberMapper;
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 	
 	@Override
 	public void memberJoin(MemberVO member) {
 		// TODO Auto-generated method stub
-		memberMapper.memberJoin(member);
+		member.setPassword(passwordEncoder.encode(member.getPassword()));
+		memberMapper.memberJoin(member);		
 	}
 
 	@Override

@@ -10,7 +10,6 @@ public class MemberVO {
 	private String password;
 	private String name;
 	private Date regdate;
-	private int role;
-	
-
+	private String auth;
 }
+ 

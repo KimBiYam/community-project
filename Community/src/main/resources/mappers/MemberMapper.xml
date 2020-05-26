@@ -5,7 +5,7 @@
 <mapper namespace="com.myapp.community.mapper.MemberMapper">
 	<insert id="memberJoin">
 		insert into community_member values
-		(#{id},#{password},#{name},now(),0)
+		(#{id},#{password},#{name},now(),#{auth})
 	</insert>
 	<select id="memberGet" resultType="MemberVO">
 		select * from community_member
