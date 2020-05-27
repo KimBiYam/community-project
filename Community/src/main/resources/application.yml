@@ -3,4 +3,4 @@ spring:  mvc:    view:      prefix: /WEB-INF/jsp/
   datasource:    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/community?serverTimezone=UTC&useSSL=false
     username: test
-    password: 1234      devtools:    livereload:      enabled: true  security:    oauth2:      client:        registration:          facebook:            client-id: 887055678427769            client-secret: 2177c80849b9cae5c8f1f70fe9b63a05                mybatis:  mapper-locations:  - mappers/*.xml  type-aliases-package: com.myapp.community.vo      
+    password: 1234      devtools:    livereload:      enabled: true  security:    oauth2:      client:        registration:          facebook:            client-id: 887055678427769            client-secret: 2177c80849b9cae5c8f1f70fe9b63a05            scope:            - profile            - email            mybatis:  mapper-locations:  - mappers/*.xml  type-aliases-package: com.myapp.community.vo

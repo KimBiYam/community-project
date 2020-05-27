@@ -1,5 +1,6 @@
 package com.myapp.community.security;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,6 +25,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		// TODO Auto-generated method stub
 		http
+			.oauth2Login()
+			.and()
 			.authorizeRequests()
 				.antMatchers("/admin/*").hasRole("ADMIN")
 				.antMatchers("/*").permitAll()
@@ -56,6 +59,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		auth.userDetailsService(customUserDetailsService)
 			.passwordEncoder(passwordEncoder);
 	}
+	
+	
 	
 	
 }
